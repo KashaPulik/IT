@@ -1,0 +1,16 @@
+.header {
+    background-image: url('utkibg.jpg');
+    background-repeat: no-repeat;
+    /* Указывает, что изображение не должно повторяться */
+    background-size: 100% auto;
+    /* Указывает, чтобы изображение покрыло весь элемент */
+    background-position: center top;
+    height: 500px;
+}
+
+.header__top {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: top;
+}
