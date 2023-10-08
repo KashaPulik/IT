@@ -1,16 +1,60 @@
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .header {
-    background-image: url('utkibg.jpg');
+    /* background-image: url('utkibg.jpg'); */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('utkibg.jpg');
     background-repeat: no-repeat;
     /* Указывает, что изображение не должно повторяться */
     background-size: 100% auto;
     /* Указывает, чтобы изображение покрыло весь элемент */
     background-position: center top;
     height: 500px;
+    color: white;
 }
 
 .header__top {
     width: 100%;
-    height: 50px;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.5);
     position: top;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 800;
+    justify-content: space-between;
+}
+
+.header__top__texts {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.header__top__text {
+    margin-right: 20px;
+}
+
+.header__top__texts .header__top__text:last-child {
+    margin-right: 0px;
+}
+
+.header__top__phone {
+    font-size: 25px;
+}
+
+.header__top__icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__bigtext {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 800;
+    padding-top: 1%;
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Магазин уток</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="header_top_texts">
+        <div class="header_top_text">О магазине</div>
+        <div class="header_top_text">Каталог</div>
+        <div class="header_top_text">Преимущества</div>
+        <div class="header_top_text">Контакты</div>
+    </div>
+    <div class="container">
+        <div class="element">Элемент 1</div>
+        <div class="element">Элемент 2</div>
+        <div class="element">Элемент 3</div>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        /* это гарантирует, что элементы будут идти в ряд, а не в столбик */
+    }
+
+    .element {
+        margin-right: 10px;
+    }
+
+    /* Удаление отступа для последнего элемента */
+    .container .element:last-child {
+        margin-right: 0;
+    }
+</style>
