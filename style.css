@@ -13,7 +13,8 @@
     background-size: 100% auto;
     /* Указывает, чтобы изображение покрыло весь элемент */
     background-position: center top;
-    height: 500px;
+    height: 100%;
+    height: 100vh;
     color: white;
 }
 
@@ -44,17 +45,74 @@
 }
 
 .header__top__phone {
+    margin-left: 20%;
     font-size: 25px;
 }
 
 .header__top__icons {
     display: flex;
     flex-direction: row;
+    font-size: 30px;
+    padding-right: 5%;
 }
 
-.header__bigtext {
+.header__top__icon {
+    width:40px;
+    
+}
+
+.header__text {
     text-align: center;
-    font-size: 70px;
+    font-size: 20px;
+}
+
+.big {
     font-weight: 800;
-    padding-top: 1%;
+    font-size: 70px;
+    padding-top: 5%;
+    color: rgb(240, 240, 240);
+}
+
+.big:hover {
+    .duck {
+        visibility: visible;
+    }
+}
+
+.duck {
+    content: url('duck.png');
+    width: 200px;
+    position:absolute;
+    top:100px;
+    right:100px;
+    visibility: hidden;
+}
+
+.small {
+    margin:0 auto;
+    width: 60%;
+    font-weight: 600;
+    color: rgb(235, 235, 235);
+}
+
+.header__button_container
+{
+    text-align: center;
+}
+
+.header__button {
+    /* align-items: center; */
+    /* margin:0 auto; */
+    width: 188.5px;
+    height: 60px;
+    border-radius: 7px;
+    margin-top: 6%;
+    background-color: rgb(250, 122, 75);
+    border-width: 0px;
+}
+
+.header__button:hover
+{
+    background-color: rgb(240, 112, 65);
+    box-shadow: 0px 0px 10px 1px rgb(240, 112, 65);
 }
