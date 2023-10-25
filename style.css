@@ -10,7 +10,6 @@
         url('utkibg.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 100vw;
     color: white;
     background-size: cover;
     background-position: center;
@@ -58,25 +57,48 @@
     width: 3vw;
 }
 
-.header__title {
+.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -10vh;
     height: 100%;
+    text-align: center;
+}
+
+.catalog {
+    background-size: cover;
+    position:relative;
+}
+
+.anchor {
+    position: absolute;
+    top: 0;
+}
+
+.catalog__text {
+    /* padding-top: 7vh; */
+    margin-top: 15vh;
+}
+
+.catalog__text .big {
+    color: black;
+    font-weight: 600;
+    font-size: 3vw;
+}
+
+.catalog__text .small {
+    color: black;
 }
 
 .big {
     font-weight: 800;
     font-size: 4vw;
-    /* font-size: 6vh; */
-    /* margin-top: 15vh; */
     color: rgb(240, 240, 240);
 }
 
 .small {
-    text-align: center;
     font-size: 1.5vw;
     width: 60%;
     font-weight: 600;
@@ -122,5 +144,5 @@
     position: absolute;
     /* margin-top: 80vh; */
     bottom: 8vh;
-    padding: 0;
+    /* padding-bottom: 8vh; */
 }
