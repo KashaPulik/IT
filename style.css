@@ -137,8 +137,6 @@
 }
 
 .catalog__text {
-    /* padding-top: 7vh; */
-    /* margin-top: 15vh; */
     width: 40vw;
 }
 
@@ -164,15 +162,11 @@
 .catalog__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 10vw;
-    width: 95%;
 }
 
 .catalog__card {
-    /* width: 95%; */
-        display: flex;
+    display: flex;
     margin-top: 4vw;
 }
 
@@ -220,7 +214,7 @@
 .catalog__button:hover {
     background-color: rgb(240, 112, 65);
     box-shadow: 0px 0px 10px 1px rgb(240, 112, 65);
-    color:goldenrod;
+    color: goldenrod;
 }
 
 .catalog__about {
