@@ -19,7 +19,7 @@
 
 .header__top {
     width: 100%;
-    height: 5vw;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.5);
     position: top;
     display: flex;
@@ -28,34 +28,28 @@
     justify-content: space-between;
 }
 
-.header__top__texts {
+.header__top__left {
     display: flex;
-    margin-left: 5vw;
-    font-size: 1.2vw;
+    margin-left: 30px;
+    font-size: 18px;
 }
 
-.header__top__text {
+.header__top .text {
     margin-right: 20px;
 }
 
-.header__top__texts .header__top__text:last-child {
+.header__top .text:last-child {
     margin-right: 0px;
 }
 
-.header__top__phone {
-    margin-left: 20vw;
-    font-size: 1.5vw;
-}
-
-.header__top__icons {
+.header__top__right {
     display: flex;
-    font-size: 2vw;
-    padding-right: 4vw;
-    margin: 100 auto;
+    font-size: 26px;
+    padding-right: 30px;
 }
 
 .header__top__icon {
-    width: 3vw;
+    padding-top: 5.5px;
 }
 
 .title {
@@ -63,7 +57,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -10vh;
     height: 100%;
     width: 660px;
     text-align: center;
@@ -80,8 +73,8 @@
 }
 
 .header__text .small {
-    font-size: 22px;
-    /* width: 60%; */
+    font-size: 20px;
+    line-height: 1.5;
     font-weight: 500;
     color: rgb(235, 235, 235);
     padding-top: 39px;
@@ -122,16 +115,14 @@ button[type="buy_duck"]:hover {
     box-shadow: 0px 0px 10px 1px rgb(240, 112, 65);
 }
 
-.header__arrow {
+button[type="arrow"] {
     background-color: transparent;
     border: none;
-    font-size: 6vh;
+    font-size: 30px;
     color: rgba(235, 235, 235, 0.7);
     cursor: pointer;
     position: absolute;
-    /* margin-top: 80vh; */
-    bottom: 8vh;
-    /* padding-bottom: 8vh; */
+    bottom: 30px;
 }
 
 .catalog {
@@ -140,7 +131,7 @@ button[type="buy_duck"]:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95vw;
+    width: 960px;
     margin: 0 auto;
 }
 
@@ -155,13 +146,13 @@ button[type="buy_duck"]:hover {
 .card-text {
     margin-left: 40px;
     text-align: justify;
-    width: 560px;
+    width: 460px;
 }
 
 .second-card {
-    margin-right: 2vw;
+    margin-right: 40px;
     text-align: justify;
-    width: 560px;
+    width: 460px;
 }
 
 .catalog__text .big {
@@ -178,42 +169,38 @@ button[type="buy_duck"]:hover {
 }
 
 .catalog__title {
-    margin-top: 15vw;
+    padding-top: 165px;
 }
 
 .catalog__list {
     display: flex;
     flex-direction: column;
-    margin-top: 10vw;
-    /* width: 70vw; */
-    width: 1200px;
+    padding-top: 165px;
+    width: 960px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .catalog__card {
     display: flex;
-    /* margin-top: 4vw; */
     padding-bottom: 120px;
 }
 
-.catalog__picture {
-    width: 560px;
-    height: 560px;
+.catalog__card .picture {
+    width: 460px;
+    height: 460px;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.catalog__picture img {
-    width: 55vw;
-}
-
-.catalog__name {
+.catalog__text .name {
+    text-align: left;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 32px;
 }
 
-.catalog__price {
+.catalog__text .price {
     font-weight: 400;
     font-size: 26px;
     margin-top: 40px;
@@ -236,8 +223,8 @@ button[type="buy"]:hover {
     box-shadow: 0px 0px 10px 1px rgb(240, 112, 65);
 }
 
-.catalog__about {
-    margin-top: 2vw;
+.catalog__text .about {
+    margin-top: 40px;
     font-size: 22px;
 }
 
