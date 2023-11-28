@@ -508,23 +508,18 @@ button[type="submit"]:hover {
 
 .cart__icon {
     right: 25px;
-    opacity: 1;
-
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: opacity;
 
     display: none;
     position: fixed;
     top: 100px;
     right: 50px;
-    z-index: 400000;
+    z-index: 4000;
 
 }
 
 .cart__icon_showed {
     display: block;
+    z-index: 400000;
 }
 
 .cart__icon .container {

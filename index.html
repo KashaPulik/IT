@@ -56,7 +56,7 @@
                 <div class="catalog__text card-text">
                     <div class="name">Обыкновенная утка (жёлтая)</div>
                     <div class="price">23999р.</div>
-                    <button type="buy">Купить</button>
+                    <button type="buy" id="0">Купить</button>
                     <div class="about">Самая обычная жёлтая утка, знакомая всем с детства. Вызывает приятные
                         воспоминания, и является отличным украшением в любом помещении и любом интерьере. Если вы не
                         любите эксперименты и склонны придерживаться строгости во всём, то эта утка для Вас!</div>
@@ -66,7 +66,7 @@
                 <div class="catalog__text second-card">
                     <div class="name">Утка-Бэтмэн</div>
                     <div class="price">28999р.</div>
-                    <button type="buy">Купить</button>
+                    <button type="buy" id="1">Купить</button>
                     <div class="about">Эта утка предназначена для любителей комиксов и фильмов о супергероях.
                         Она запросто войдёт в коллекцию фигурок и не оставит равнодушным ни одного из тех, кто её увидит
                     </div>
@@ -78,7 +78,7 @@
                 <div class="catalog__text card-text">
                     <div class="name">Огромная утка</div>
                     <div class="price">2499999р.</div>
-                    <button type="buy">Купить</button>
+                    <button type="buy" id="2">Купить</button>
                     <div class="about">Невероятных размеров утка станет отличным украшением любого мероприятия
                         с соответствующими масштабами. Вам нужно презентовать продукт, над которым все сотрудники вашей
                         компании трудились долгие годы? Эта утка для Вас!</div>
@@ -183,7 +183,7 @@
                 <div class="js-counter">1</div>
             </div>
         </div>
-        <div class="cart__win cart__win_showed" style="opacity: 1; transition: opacity 0.3s ease 0s;">
+        <div class="cart__win">
             <button type="close">
                 <svg role="presentation" width="23px" height="23px" viewBox="0 0 23 23" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -202,41 +202,13 @@
                     <div class="text">Ваш заказ:</div>
                 </div>
                 <div class="products">
-                    <div class="product" i="0">
-                        <div class="thumb">
-                            <div class="image"
-                                style="background-image:url('https://static.tildacdn.info/tild3136-3933-4131-b039-343836303737/s-tsuchiya-_WjhfEzRD.jpg');">
-                            </div>
-                        </div>
-                        <div class="title">Обыкновенная утка (жёлтая)</div>
-                        <div class="plusminus">
-                            <span class="minus">
-                                <img src="https://static.tildacdn.com/lib/linea/c8eecd27-9482-6c4f-7896-3eb09f6a1091/arrows_circle_minus.svg"
-                                    style="width:16px;height:16px;border:0;">
-                            </span>
-                            <span class="quantity">1</span>
-                            <span class="plus">
-                                <img src="https://static.tildacdn.com/lib/linea/c47d1e0c-6880-dc39-ae34-521197f7fba7/arrows_circle_plus.svg"
-                                    style="width:16px;height:16px;border:0;">
-                            </span>
-                        </div>
-                        <div class="amount">
-                            <div class="price">23 999</div>
-                            <div class="currency">р.</div>
-                        </div>
-                        <div class="delete">
-                            <span class="icon">
-                                <img
-                                    src="https://static.tildacdn.com/lib/linea/1bec3cd7-e9d1-2879-5880-19b597ef9f1a/arrows_circle_remove.svg">
-                            </span>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="bottom">
                     <div class="container">
                         <span class="label">Сумма: </span>
                         <span class="price-box">
-                            <div style="display:inline-block;">23 999</div>
+                            <div style="display:inline-block;">0</div>
                             <div style="display:inline-block;">р.</div>
                         </span>
                     </div>
