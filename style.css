@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: sans-serif, Arial, Helvetica;
     scroll-behavior: smooth;
 }
@@ -10,18 +9,25 @@
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('img/utkibg.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
     color: white;
     background-size: cover;
     background-position: center;
     height: 100vh;
+    min-width: 1200px;
 }
 
 .header__top {
     width: 100%;
+    min-width: 1200px;
     height: 70px;
     background-color: rgba(0, 0, 0, 0.5);
     position: top;
+    display: flex;
+}
+
+.header__top .container {
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     font-weight: 800;
@@ -126,12 +132,8 @@ button[type="arrow"] {
 }
 
 .catalog {
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 960px;
+    width: 1200px;
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -141,6 +143,7 @@ button[type="arrow"] {
 
 .catalog__text {
     width: 960px;
+    margin: 0 auto;
 }
 
 .card-text {
@@ -229,17 +232,19 @@ button[type="buy"]:hover {
 }
 
 .uniqduck {
-    background-color: #e8e8e8;
+    font-size: 42px;
     padding-top: 150px;
     padding-bottom: 60px;
-    font-size: 42px;
+
+    background-color: #e8e8e8;
+    min-width: 1200px;
+
+    text-align: center;
+    margin: 0 auto;
 }
 
 .uniqduck__text {
     text-align: center;
-    /* padding-left: 200px; */
-    /* margin-left: 20px;
-    margin-right: 20px; */
     padding-bottom: 60px;
     width: 760px;
     margin: 0 auto;
@@ -384,10 +389,12 @@ button[type="submit"]:hover {
 }
 
 .advantages {
+    background-color: #e8e8e8;
+    min-width: 1200px;
+
     text-align: center;
     margin: 0 auto;
     padding-bottom: 165px;
-    background-color: #e8e8e8;
 }
 
 .advantages__text {
@@ -453,14 +460,13 @@ button[type="submit"]:hover {
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('img/utkibg.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    color: white;
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 1200px;
 }
 
 .basement__block {
@@ -469,6 +475,7 @@ button[type="submit"]:hover {
     background-color: white;
     color: black;
     padding: 80px;
+    margin: 0 auto;
 }
 
 .basement .text {
