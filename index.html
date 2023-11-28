@@ -13,10 +13,10 @@
         <div class="header__top">
             <div class="container">
                 <div class="header__top__left">
-                    <div class="text">О магазине</div>
-                    <div class="text">Каталог</div>
-                    <div class="text">Преимущества</div>
-                    <div class="text">Контакты</div>
+                    <button type="about">О магазине</button>
+                    <button type="catalog">Каталог</button>
+                    <button type="advantages">Преимущества</button>
+                    <button type="contacts">Контакты</button>
                 </div>
                 <div class="header__top__right">
                     <div class="text">+1 123 456 78 90</div>
@@ -160,13 +160,119 @@
                 <div class="big">hello@utka.com</div>
             </div>
             <div class="text">
-                <div class="light">Невский проспект, 22</div>
-                <div class="light">Санкт-Петербург</div>
+                <div class="light">Гурьевская улица, 51</div>
+                <div class="light">Новосибирск</div>
             </div>
             <div class="basement__icons">
                 <div class="fa fa-vk header__top__icon"></div>
                 <div class="fa fa-telegram header__top__icon"></div>
                 <div class="fa fa-twitter header__top__icon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cart">
+        <div class="cart__icon cart__icon_showed">
+            <div class="container">
+                <div class="image">
+                    <svg role="img" class="cart_icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path>
+                        <path fill="none" stroke-width="2" stroke-miterlimit="10"
+                            d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path>
+                    </svg>
+                </div>
+                <div class="js-counter">1</div>
+            </div>
+        </div>
+        <div class="cart__win cart__win_showed" style="opacity: 1; transition: opacity 0.3s ease 0s;">
+            <button type="close">
+                <svg role="presentation" width="23px" height="23px" viewBox="0 0 23 23" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+                        <rect
+                            transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+                            x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                        <rect
+                            transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+                            x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                    </g>
+                </svg>
+            </button>
+            <div class="content">
+                <div class="top">
+                    <div class="text">Ваш заказ:</div>
+                </div>
+                <div class="products">
+                    <div class="product" i="0">
+                        <div class="thumb">
+                            <div class="image"
+                                style="background-image:url('https://static.tildacdn.info/tild3136-3933-4131-b039-343836303737/s-tsuchiya-_WjhfEzRD.jpg');">
+                            </div>
+                        </div>
+                        <div class="title">Обыкновенная утка (жёлтая)</div>
+                        <div class="plusminus">
+                            <span class="minus">
+                                <img src="https://static.tildacdn.com/lib/linea/c8eecd27-9482-6c4f-7896-3eb09f6a1091/arrows_circle_minus.svg"
+                                    style="width:16px;height:16px;border:0;">
+                            </span>
+                            <span class="quantity">1</span>
+                            <span class="plus">
+                                <img src="https://static.tildacdn.com/lib/linea/c47d1e0c-6880-dc39-ae34-521197f7fba7/arrows_circle_plus.svg"
+                                    style="width:16px;height:16px;border:0;">
+                            </span>
+                        </div>
+                        <div class="amount">
+                            <div class="price">23 999</div>
+                            <div class="currency">р.</div>
+                        </div>
+                        <div class="delete">
+                            <span class="icon">
+                                <img
+                                    src="https://static.tildacdn.com/lib/linea/1bec3cd7-e9d1-2879-5880-19b597ef9f1a/arrows_circle_remove.svg">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="container">
+                        <span class="label">Сумма: </span>
+                        <span class="price-box">
+                            <div style="display:inline-block;">23 999</div>
+                            <div style="display:inline-block;">р.</div>
+                        </span>
+                    </div>
+                </div>
+                <div class="orderform">
+                    <div class="input-group">
+                        <div class="title">Ваше имя</div>
+                        <div class="input">
+                            <input type="text" autocomplete="name" name="Name" id="input_1496239431201"
+                                value="" data-tilda-req="1" aria-required="true"
+                                data-tilda-rule="name" aria-describedby="error_1496239431201">
+                            <div class="input-error" aria-live="polite" id="error_1496239431201"></div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="title">Ваш Email</div>
+                        <div class="input">
+                            <input type="email" autocomplete="email" name="Email" id="input_1496239431201"
+                                value="" data-tilda-req="1" aria-required="true"
+                                data-tilda-rule="name" aria-describedby="error_1496239431201">
+                            <div class="input-error" aria-live="polite" id="error_1496239431201"></div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="title">Ваш телефон</div>
+                        <div class="input">
+                            <input type="tel" autocomplete="tel" name="Phone" id="input_1496239431201"
+                                value="" data-tilda-req="1" aria-required="true"
+                                data-tilda-rule="name" aria-describedby="error_1496239431201">
+                            <div class="input-error" aria-live="polite" id="error_1496239431201"></div>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Оформить заказ</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

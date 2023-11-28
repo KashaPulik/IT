@@ -36,8 +36,15 @@
 
 .header__top__left {
     display: flex;
+}
+
+.header__top__left button {
+    background-color: transparent;
+    border: none;
+
     margin-left: 30px;
     font-size: 18px;
+    color: white;
 }
 
 .header__top .text {
@@ -56,6 +63,7 @@
 
 .header__top__icon {
     padding-top: 5.5px;
+    padding-left: 5.5px;
 }
 
 .title {
@@ -496,4 +504,307 @@ button[type="submit"]:hover {
 .basement__icons {
     font-size: 50px;
     text-align: center;
+}
+
+.cart__icon {
+    right: 25px;
+    opacity: 1;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: opacity;
+
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    z-index: 400000;
+
+}
+
+.cart__icon_showed {
+    display: block;
+}
+
+.cart__icon .container {
+    position: relative;
+    box-sizing: content-box;
+}
+
+.cart__icon .image {
+    position: relative;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    overflow: hidden;
+}
+
+.cart_icon-img {
+    width: 40px;
+    height: 40px;
+    padding: 18px 20px 22px;
+    stroke: #000;
+}
+
+.js-counter {
+    min-width: 30px;
+    width: initial;
+    height: 30px;
+    padding: 0 5px;
+    background-color: #ff623b;
+    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.cart__win {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    z-index: 4002;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.cart__win_showed {
+    display: block;
+    z-index: 100001;
+}
+
+button[type="close"] {
+    width: 23px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cart__win .content {
+    margin: 65px auto;
+    width: 100%;
+    max-width: 560px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 40px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.cart__win .top {
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.top .text {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+.cart__win .products {
+    display: table;
+    width: 100%;
+}
+
+.products .product {
+    display: table;
+    width: 100%;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.product .thumb {
+    display: table-cell;
+    width: 70px;
+    height: 100px;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+
+.thumb .image {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    border-radius: 7px;
+    background-color: #eee;
+    background-position: center;
+}
+
+.products .title {
+    display: table-cell;
+    font-size: 16px;
+    padding: 15px 0;
+    font-weight: 600;
+    vertical-align: middle;
+    color: #000;
+    text-align: left;
+}
+
+.product .plusminus {
+    display: table-cell;
+    width: 80px;
+    padding: 13px 20px 16px;
+    padding-left: 10px;
+    vertical-align: middle;
+    color: #000;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1.55;
+    font-weight: 300;
+}
+
+.plusminus .minus {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    opacity: .4;
+    width: 16px;
+    height: 16px;
+}
+
+.plusminus .plus {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    opacity: .4;
+    width: 16px;
+    height: 16px;
+}
+
+.plusminus .quantity {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 5px;
+    padding: 2px 5px;
+    color: #000;
+    border: 1px solid transparent;
+}
+
+.product .amount {
+    display: table-cell;
+    width: 80px;
+    font-size: 16px;
+    padding: 15px 0;
+    vertical-align: middle;
+    color: #000;
+    white-space: nowrap;
+}
+
+.amount .price {
+    display: inline-block;
+}
+
+.amount .currency {
+    display: inline-block;
+}
+
+.product .delete {
+    display: table-cell;
+    width: 20px;
+    padding: 15px 0 15px 15px;
+    vertical-align: middle;
+}
+
+.delete .icon {
+    cursor: pointer;
+    display: inline-block;
+    opacity: .4;
+    height: 20px;
+    width: 20px;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.content .bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.bottom .container {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 16px;
+    text-align: right;
+    font-weight: 600;
+    color: black;
+}
+
+.bottom .price-box {
+    white-space: nowrap;
+}
+
+.orderform {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.orderform .input-group {
+    margin-bottom: 20px;
+}
+
+.orderform .title {
+    display: block;
+    width: 100%;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.orderform input {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.33;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 0;
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.orderform .input-error {
+    display: none;
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.orderform .submit{
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.orderform button[type="submit"] {
+    width: 100%;
+    border-radius: 0;
 }
