@@ -6,9 +6,27 @@
     <title>Магазин уток</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
 
 <body>
+    <div class="header__top__mini">
+        <div class="top-container">
+            <div>&nbsp;</div>
+            <button type="expand">
+                <div class="fa fa-bars"></div>
+                <div class="fa fa-times" style="display: none;"></div>
+            </button>
+        </div>
+        <div class="expand-container">
+            <div class="menu">
+                <button type="about">О магазине</button>
+                <button type="catalog">Каталог</button>
+                <button type="advantages">Преимущества</button>
+                <button type="contacts">Контакты</button>
+            </div>
+        </div>
+    </div>
     <div class="header">
         <div class="header__top">
             <div class="container">
@@ -183,7 +201,7 @@
                 <div class="total-quantity">0</div>
             </div>
         </div>
-        <div class="cart__win cart__win_showed">
+        <div class="cart__win">
             <button type="close">
                 <svg role="presentation" width="23px" height="23px" viewBox="0 0 23 23" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -16,6 +16,63 @@
     min-width: 1200px;
 }
 
+.header__top__mini {
+    display: block;
+    background-color: black;
+    width: 100%;
+    min-width: 1200px;
+    position: top;
+}
+
+.header__top__mini .top-container {
+    min-height: 64px;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-bars {
+    transform:scale(2);
+}
+
+.fa-times {
+    transform:scale(3);
+}
+
+button[type="expand"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.expand-container {
+    width: 100%;
+    background-color: black;
+}
+
+.expand-container .menu {
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu button {
+        background-color: transparent;
+        border: none;
+        margin-left: 30px;
+        font-size: 18px;
+        color: white;
+        padding: 20px;
+}
+
 .header__top {
     width: 100%;
     min-width: 1200px;
@@ -790,7 +847,7 @@ button[type="close"] {
 }
 
 .visible {
-    display:block;
+    display: block;
 }
 
 .orderform .error-box {
@@ -807,7 +864,7 @@ button[type="close"] {
     padding: 20px 0 20px;
 }
 
-.orderform .submit{
+.orderform .submit {
     display: block;
     text-align: center;
     vertical-align: middle;
@@ -823,7 +880,7 @@ button[type="close"] {
 }
 
 .success-box {
-    display:none;
+    display: none;
     text-align: center;
     background: #62c584;
     color: #fff;
@@ -835,4 +892,10 @@ button[type="close"] {
     color: white;
     font-size: 18px;
     padding: 20px 0 20px;
+}
+
+@media screen and (max-width: 980px) {
+    .header__top {
+        display: none;
+    }
 }
