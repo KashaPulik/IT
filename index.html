@@ -94,7 +94,7 @@
         </div>
         <div class="uniqduck__form">
             <div class="text">E-mail</div>
-            <input type="email" placeholder="Ваш E-mail" name="E-mail">
+            <input type="email" name="E-mail" placeholder="Ваш E-mail" required>
             <div class="text">Имя</div>
             <input type="name" placeholder="Ваше полное имя">
             <div class="text">Комментарии</div>
@@ -183,7 +183,7 @@
                 <div class="total-quantity">0</div>
             </div>
         </div>
-        <div class="cart__win">
+        <div class="cart__win cart__win_showed">
             <button type="close">
                 <svg role="presentation" width="23px" height="23px" viewBox="0 0 23 23" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -202,7 +202,7 @@
                     <div class="text">Ваш заказ:</div>
                 </div>
                 <div class="products">
-                    
+
                 </div>
                 <div class="bottom">
                     <div class="container">
@@ -217,32 +217,36 @@
                     <div class="input-group">
                         <div class="title">Ваше имя</div>
                         <div class="input">
-                            <input type="text" autocomplete="name" name="Name" id="input_1496239431201"
-                                value="" data-tilda-req="1" aria-required="true"
-                                data-tilda-rule="name" aria-describedby="error_1496239431201">
-                            <div class="input-error" aria-live="polite" id="error_1496239431201"></div>
+                            <input type="text" name="Name" value="">
+                            <div class="input-error">Пожалуйста, заполните все обязательные поля
+                            </div>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="title">Ваш Email</div>
                         <div class="input">
-                            <input type="email" autocomplete="email" name="Email" id="input_1496239431201"
-                                value="" data-tilda-req="1" aria-required="true"
-                                data-tilda-rule="name" aria-describedby="error_1496239431201">
-                            <div class="input-error" aria-live="polite" id="error_1496239431201"></div>
+                            <input type="email" autocomplete="email" name="Email" value="">
+                            <div class="input-error">Пожалуйста, заполните все обязательные поля
+                            </div>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="title">Ваш телефон</div>
                         <div class="input">
-                            <input type="tel" autocomplete="tel" name="Phone" id="input_1496239431201"
-                                value="" data-tilda-req="1" aria-required="true"
-                                data-tilda-rule="name" aria-describedby="error_1496239431201">
-                            <div class="input-error" aria-live="polite" id="error_1496239431201"></div>
+                            <input type="tel" autocomplete="tel" name="Phone" value="">
+                            <div class="input-error">Пожалуйста, заполните все обязательные поля
+                            </div>
                         </div>
+                    </div>
+                    <div class="error-box">
+                        <div class="text">Пожалуйста, заполните все обязательные поля</div>
                     </div>
                     <div class="submit">
                         <button type="submit">Оформить заказ</button>
+                    </div>
+                </div>
+                <div class="success-box">
+                    <div class="text">Спасибо! Данные успешно отправлены.
                     </div>
                 </div>
             </div>

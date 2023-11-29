@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentQuantity = Number(quantityElement.textContent);
             const totalQuantityElement = document.querySelector(".total-quantity");
             const totalQuantity = Number(cartIcon.querySelector(".total-quantity").textContent);
-            
+
             quantityElement.textContent = currentQuantity + 1;
             totalQuantityElement.textContent = totalQuantity + 1;
             updatePrice();
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentQuantity = Number(quantityElement.textContent);
             const totalQuantityElement = document.querySelector(".total-quantity");
             const totalQuantity = Number(cartIcon.querySelector(".total-quantity").textContent);
-    
+
             quantityElement.textContent = currentQuantity - 1;
             totalQuantityElement.textContent = totalQuantity - 1;
 
@@ -230,3 +230,65 @@ document.addEventListener("DOMContentLoaded", function () {
         totalPriceElement.textContent = totalPrice.toLocaleString(); // добавляем пробелы для разделения тысяч
     }
 });
+
+function showElement(element) {
+    element.style.display = 'block';
+}
+
+function hideElement(element) {
+    element.style.display = 'none';
+}
+
+function showSuccess() {
+    const successElement = document.querySelector('.success-box');
+    const productsElement = document.querySelector('.products');
+    const bottomElement = document.querySelector('.bottom');
+    const orderformElement = document.querySelector('.orderform');
+    showElement(successElement);
+    hideElement(productsElement);
+    hideElement(bottomElement);
+    hideElement(orderformElement);
+}
+
+function hideSuccess() {
+    const successElement = document.querySelector('.success-box');
+    const productsElement = document.querySelector('.products');
+    const bottomElement = document.querySelector('.bottom');
+    const orderformElement = document.querySelector('.orderform');
+    hideElement(successElement);
+    showElement(productsElement);
+    showElement(bottomElement);
+    showElement(orderformElement);
+
+}
+
+function checkCartInput() {
+    const inputElements = document.querySelectorAll(".cart .input");
+    let checkStatus = 1;
+
+    inputElements.forEach(function (inputElement) {
+        if (inputElement.querySelector('input').value.trim() == '') {
+            showElement(inputElement.querySelector('.input-error'));
+            showElement(document.querySelector('.error-box'));
+            checkStatus = 0;
+        }
+    })
+    if (checkStatus == 1)
+        showSuccess();
+};
+
+document.querySelector('.cart button[type="submit"]').addEventListener('click', function () {
+    checkCartInput();
+});
+
+function clickInput () {
+    const inputElements = document.querySelectorAll('.orderform .input');
+    inputElements.forEach(function (inputElement) {
+        inputElement.querySelector('input').addEventListener('click', function () {
+            hideElement(inputElement.querySelector('.input-error'));
+            hideElement(document.querySelector('.orderform .error-box'));
+        });
+    });
+}
+
+clickInput();

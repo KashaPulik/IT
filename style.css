@@ -789,6 +789,24 @@ button[type="close"] {
     margin-top: 5px;
 }
 
+.visible {
+    display:block;
+}
+
+.orderform .error-box {
+    display: none;
+    background: #f95d51;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error-box .text {
+    color: white;
+    font-size: 18px;
+    padding: 20px 0 20px;
+}
+
 .orderform .submit{
     display: block;
     text-align: center;
@@ -802,4 +820,19 @@ button[type="close"] {
 .orderform button[type="submit"] {
     width: 100%;
     border-radius: 0;
+}
+
+.success-box {
+    display:none;
+    text-align: center;
+    background: #62c584;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 70px 0 70px;
+}
+
+.success-box .text {
+    color: white;
+    font-size: 18px;
+    padding: 20px 0 20px;
 }
