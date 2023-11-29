@@ -546,7 +546,7 @@ button[type="submit"]:hover {
     stroke: #000;
 }
 
-.js-counter {
+.total-quantity {
     min-width: 30px;
     width: initial;
     height: 30px;
