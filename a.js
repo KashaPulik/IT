@@ -374,3 +374,21 @@ document.querySelector('.uniqduck button').addEventListener('click', function ()
         commentElement.value = '';
     }
 })
+
+document.querySelector('button[type="expand"]').addEventListener('click', function () {
+    const lines = document.querySelector('.fa-bars');
+    const cross = document.querySelector('.fa-times');
+    const expand = document.querySelector('.expand-container');
+
+    if (lines.style.display != 'none') {
+        lines.style.display = 'none';
+        cross.style.display = '';
+        expand.style.display = 'block';
+        return;
+    }
+    if (cross.style.display != 'none') {
+        lines.style.display = '';
+        cross.style.display = 'none';
+        expand.style.display = 'none';
+    }
+})

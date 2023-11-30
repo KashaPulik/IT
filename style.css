@@ -4,6 +4,12 @@
     scroll-behavior: smooth;
 }
 
+a,
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
 .header {
     background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -35,11 +41,11 @@
 }
 
 .fa-bars {
-    transform:scale(2);
+    transform: scale(2);
 }
 
 .fa-times {
-    transform:scale(3);
+    transform: scale(3);
 }
 
 button[type="expand"] {
@@ -65,12 +71,35 @@ button[type="expand"] {
 }
 
 .menu button {
-        background-color: transparent;
-        border: none;
-        margin-left: 30px;
-        font-size: 18px;
-        color: white;
-        padding: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+}
+
+.expand-container .contacts {
+    display: block;
+    text-align: center;
+}
+
+.contacts .container {
+    padding: 20px;
+    display: table;
+    position: static;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contacts .fa {
+    color: white;
+    font-size: 40px;
+}
+
+.contacts .number {
+    color: white;
+    font-size: 30px;
 }
 
 .header__top {
@@ -192,8 +221,7 @@ button[type="arrow"] {
     font-size: 30px;
     color: rgba(235, 235, 235, 0.7);
     cursor: pointer;
-    position: absolute;
-    bottom: 30px;
+    padding: 50px 0 0 0;
 }
 
 .catalog {
@@ -652,7 +680,7 @@ button[type="close"] {
 .cart__win .content {
     margin: 65px auto;
     width: 100%;
-    max-width: 560px;
+    max-width: 860px;
     min-height: 300px;
     background-color: rgba(255, 255, 255, 1);
     padding: 40px;
@@ -915,11 +943,20 @@ button[type="close"] {
     padding: 20px 0 20px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) and (min-height: 1200px) {
     .header__top {
         display: none;
     }
+
     .header__top__mini {
-        display:block;
+        display: block;
+    }
+
+    .cart__win .content {
+        margin: 650px auto;
+    }
+
+    button[type="arrow"] {
+        padding-top:400px;
     }
 }
