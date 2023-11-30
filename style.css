@@ -4,6 +4,26 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f2bf93;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .25) 50%,
+            rgba(255, 255, 255, .25) 75%,
+            transparent 75%,
+            transparent);
+}
+
 a,
 a:active {
     text-decoration: none;
@@ -41,7 +61,7 @@ a:active {
 }
 
 .fa-bars {
-    transform: scale(2);
+    transform: scale(3);
 }
 
 .fa-times {
@@ -53,7 +73,7 @@ button[type="expand"] {
     height: 40px;
     padding: 0;
     border: none;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
     z-index: 999;
 }
@@ -92,8 +112,11 @@ button[type="expand"] {
     margin: 0 auto;
 }
 
-.contacts .fa {
+.fa {
     color: white;
+}
+
+.contacts .fa {
     font-size: 40px;
 }
 
@@ -159,7 +182,6 @@ button[type="expand"] {
     align-items: center;
     height: 100%;
     width: 660px;
-    text-align: center;
 }
 
 .header__text {
@@ -218,7 +240,6 @@ button[type="buy_duck"]:hover {
 button[type="arrow"] {
     background-color: transparent;
     border: none;
-    font-size: 30px;
     color: rgba(235, 235, 235, 0.7);
     cursor: pointer;
     padding: 50px 0 0 0;
@@ -231,7 +252,7 @@ button[type="arrow"] {
 }
 
 .anchor {
-    color: rgba(0, 0, 0, 0)
+    color: rgba(0, 0, 0, 0);
 }
 
 .catalog__text {
@@ -662,13 +683,17 @@ button[type="submit"]:hover {
     overflow-y: auto;
 }
 
+.cart__win::-webkit-scrollbar {
+    width: 0;
+}
+
 .cart__win_showed {
     display: block;
     z-index: 100001;
 }
 
 button[type="close"] {
-    width: 23px;
+    width: 40px;
     position: absolute;
     top: 20px;
     right: 30px;
@@ -916,7 +941,6 @@ button[type="close"] {
 .orderform .submit {
     display: block;
     text-align: center;
-    vertical-align: middle;
     height: 100%;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -957,6 +981,7 @@ button[type="close"] {
     }
 
     button[type="arrow"] {
-        padding-top:400px;
+        padding-top: 400px;
+        transform: scale(2);
     }
 }
