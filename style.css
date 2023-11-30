@@ -201,6 +201,7 @@ button[type="expand"] {
     font-weight: 500;
     color: rgb(235, 235, 235);
     padding-top: 39px;
+    text-align: center;
 }
 
 .header__text .big:hover {
