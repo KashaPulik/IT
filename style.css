@@ -967,7 +967,7 @@ button[type="close"] {
     padding: 20px 0 20px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) and (min-height: 1200px) {
     .header__top {
         display: none;
     }
