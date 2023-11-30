@@ -112,11 +112,15 @@
         </div>
         <div class="uniqduck__form">
             <div class="text">E-mail</div>
-            <input type="email" name="E-mail" placeholder="Ваш E-mail" required>
+            <input type="email" name="E-mail" placeholder="Ваш E-mail" value="">
+            <div class="input-error">Это поле обязательно для ввода!</div>
+            <div class="input-error-2">E-mail адресс введён неправильно</div>
             <div class="text">Имя</div>
-            <input type="name" placeholder="Ваше полное имя">
+            <input type="name" placeholder="Ваше полное имя" value="">
+            <div class="input-error">Это поле обязательно для ввода!</div>
             <div class="text">Комментарии</div>
             <textarea></textarea>
+            <div class="success-output">Успех!</div>
             <button type="submit">Отправить</button>
         </div>
     </div>
@@ -238,6 +242,7 @@
                             <input type="text" name="Name" value="">
                             <div class="input-error">Пожалуйста, заполните все обязательные поля
                             </div>
+                            <div class="input-error-2"></div>
                         </div>
                     </div>
                     <div class="input-group">
@@ -245,6 +250,8 @@
                         <div class="input">
                             <input type="email" autocomplete="email" name="Email" value="">
                             <div class="input-error">Пожалуйста, заполните все обязательные поля
+                            </div>
+                            <div class="input-error-2">Адрес почты введён неправильно
                             </div>
                         </div>
                     </div>
@@ -254,13 +261,15 @@
                             <input type="tel" autocomplete="tel" name="Phone" value="">
                             <div class="input-error">Пожалуйста, заполните все обязательные поля
                             </div>
+                            <div class="input-error-2">Номер телефона введён неправильно
+                            </div>
                         </div>
                     </div>
                     <div class="error-box">
                         <div class="text">Пожалуйста, заполните все обязательные поля</div>
                     </div>
                     <div class="submit">
-                        <button type="submit">Оформить заказ</button>
+                        <button type="submit" value="Send">Оформить заказ</button>
                     </div>
                 </div>
                 <div class="success-box">

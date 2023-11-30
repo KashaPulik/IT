@@ -17,7 +17,7 @@
 }
 
 .header__top__mini {
-    display: block;
+    display: none;
     background-color: black;
     width: 100%;
     min-width: 1200px;
@@ -839,11 +839,32 @@ button[type="close"] {
     border: 1px solid #000000;
 }
 
-.orderform .input-error {
+.input-error {
     display: none;
     color: red;
     font-size: 13px;
     margin-top: 5px;
+}
+
+.input-error-2 {
+    display: none;
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.uniqduck .input-error {
+    font-size: 20px;
+}
+
+.uniqduck .input-error-2 {
+    font-size: 20px;
+}
+
+.success-output {
+    display: none;
+    color: green;
+    font-size: 40px;
 }
 
 .visible {
@@ -897,5 +918,8 @@ button[type="close"] {
 @media screen and (max-width: 980px) {
     .header__top {
         display: none;
+    }
+    .header__top__mini {
+        display:block;
     }
 }

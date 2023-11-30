@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeCart() {
         hideCart();
         showIcon();
+        if (document.querySelector('.cart .success-box').style.display == 'block') {
+            hideSuccess();
+            hideIcon();
+            productInCart = [0, 0, 0];
+        }
     }
 
     cartIcon.addEventListener("click", function () {
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const buyButtons = document.querySelectorAll("button[type='buy']");
 
-    buyButtons.forEach(function (button, index) {
+    buyButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             openCart();
             addProductToCart(button.id);
@@ -106,10 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (productInCart[id] == 0) {
             totalQuantityElement.textContent = totalQuantity + 1;
             productElement.classList.add("product");
-            productElement.setAttribute("i", id); // Индекс товара (может быть уникальным идентификатором)
+            // productElement.setAttribute("i", id); // Индекс товара (может быть уникальным идентификатором)
             productInCart[id] = 1;
             productElement.innerHTML = `
-        <div class="product" id="0">
+        <div class="product">
         <div class="thumb">
             <div class="image"
                 style="background-image:url('img/${productIcons[id]}card.jpg');">
@@ -259,7 +264,26 @@ function hideSuccess() {
     showElement(productsElement);
     showElement(bottomElement);
     showElement(orderformElement);
+    const inputElements = document.querySelectorAll('.cart input');
+    inputElements.forEach(function (element) {
+        element.value = '';
+    })
+    const productElements = document.querySelectorAll('.products div');
+    productElements.forEach(function (element) {
+        element.remove();
+    })
+    document.querySelector('.cart .total-quantity').textContent = '0';
+}
 
+function validateEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return emailRegex.test(email);
+}
+
+function validatePhone(phone) {
+    const phoneNumberPattern = /^(\+7)?(\d{0,11})$/;
+    return phoneNumberPattern.test(phone);
 }
 
 function checkCartInput() {
@@ -273,6 +297,26 @@ function checkCartInput() {
             checkStatus = 0;
         }
     })
+
+    const email = inputElements[1].querySelector('input').value.trim();
+    let phoneNumber = inputElements[2].querySelector('input').value.trim();
+    if (phoneNumber != '') {
+        phoneNumber = phoneNumber.replace(/\D/g, '');
+        if (phoneNumber == '') {
+            phoneNumber = 'aboba';
+        }
+    }
+
+    if (!validateEmail(email) && email != '') {
+        showElement(inputElements[1].querySelector('.input-error-2'));
+        checkStatus = 0;
+    }
+
+    if (!validatePhone(phoneNumber) && phoneNumber != '') {
+        showElement(inputElements[2].querySelector('.input-error-2'));
+        checkStatus = 0;
+    }
+
     if (checkStatus == 1)
         showSuccess();
 };
@@ -281,14 +325,52 @@ document.querySelector('.cart button[type="submit"]').addEventListener('click', 
     checkCartInput();
 });
 
-function clickInput () {
-    const inputElements = document.querySelectorAll('.orderform .input');
-    inputElements.forEach(function (inputElement) {
-        inputElement.querySelector('input').addEventListener('click', function () {
-            hideElement(inputElement.querySelector('.input-error'));
-            hideElement(document.querySelector('.orderform .error-box'));
-        });
+document.querySelectorAll('.orderform .input').forEach(function (inputElement) {
+    inputElement.querySelector('input').addEventListener('click', function () {
+        hideElement(inputElement.querySelector('.input-error'));
+        hideElement(inputElement.querySelector('.input-error-2'));
+        hideElement(document.querySelector('.orderform .error-box'));
     });
-}
+});
 
-clickInput();
+document.querySelector('.uniqduck button').addEventListener('click', function () {
+    const formElement = document.querySelector('.uniqduck__form');
+    const emailElement = formElement.querySelectorAll('input')[0];
+    const emptyEmail = formElement.querySelectorAll('.input-error')[0];
+    const uncorrectEmail = formElement.querySelector('.input-error-2');
+    const nameElement = formElement.querySelectorAll('input')[1];
+    const emptyName = formElement.querySelectorAll('.input-error')[1];
+    const commentElement = formElement.querySelector('textarea');
+    const success = formElement.querySelector('.success-output');
+    checkStatus = 1;
+    if (emailElement.value == '') {
+        showElement(emptyEmail);
+        checkStatus = 0;
+    }
+    if (!validateEmail(emailElement.value.trim()) && emailElement.value != '') {
+        showElement(uncorrectEmail);
+        checkStatus = 0;
+    }
+    if (nameElement.value == '') {
+        showElement(emptyName);
+        checkStatus = 0;
+    }
+    emailElement.addEventListener('click', function () {
+        hideElement(emptyEmail);
+        hideElement(uncorrectEmail);
+        hideElement(success);
+    })
+    nameElement.addEventListener('click', function () {
+        hideElement(emptyName);
+        hideElement(success);
+    })
+    commentElement.addEventListener('click', function () {
+        hideElement(success);
+    })
+    if (checkStatus) {
+        showElement(success);
+        emailElement.value = '';
+        nameElement.value = '';
+        commentElement.value = '';
+    }
+})
