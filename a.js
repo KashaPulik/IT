@@ -14,19 +14,35 @@ document.querySelector('button[type="arrow"]').addEventListener('click', functio
     smooth_scroll('.anchor');
 });
 
-document.querySelector('button[type="about"]').addEventListener('click', function () {
+document.querySelector('.header__top__mini button[type="about"]').addEventListener('click', function () {
     smooth_scroll('.anchor');
 });
 
-document.querySelector('button[type="catalog"]').addEventListener('click', function () {
+document.querySelector('.header__top__mini button[type="catalog"]').addEventListener('click', function () {
     smooth_scroll('.catalog__list');
 });
 
-document.querySelector('button[type="advantages"]').addEventListener('click', function () {
+document.querySelector('.header__top__mini button[type="advantages"]').addEventListener('click', function () {
     smooth_scroll('.advantages');
 });
 
-document.querySelector('button[type="contacts"]').addEventListener('click', function () {
+document.querySelector('.header__top__mini button[type="contacts"]').addEventListener('click', function () {
+    smooth_scroll('.basement');
+});
+
+document.querySelector('.header__top button[type="about"]').addEventListener('click', function () {
+    smooth_scroll('.anchor');
+});
+
+document.querySelector('.header__top button[type="catalog"]').addEventListener('click', function () {
+    smooth_scroll('.catalog__list');
+});
+
+document.querySelector('.header__top button[type="advantages"]').addEventListener('click', function () {
+    smooth_scroll('.advantages');
+});
+
+document.querySelector('.header__top button[type="contacts"]').addEventListener('click', function () {
     smooth_scroll('.basement');
 });
 
